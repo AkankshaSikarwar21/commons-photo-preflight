@@ -1,0 +1,8 @@
+@"
+.venv/
+__pycache__/
+*.pyc
+report.csv
+report.html
+.pytest_cache/
+"@ | Set-Content -Encoding utf8 .gitignore
