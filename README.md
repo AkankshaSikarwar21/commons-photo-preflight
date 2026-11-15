@@ -30,14 +30,24 @@ python -m preflight.cli "C:\path\to\photos"
 
 ## Example output
 
+Example run on four laptop webcam photos:
+
 ```
-PASTE YOUR REAL OUTPUT HERE
+FAIL  WIN_20261115_13_36_49_Pro.jpg | blurry; low resolution | no camera info
+FAIL  WIN_20261115_13_36_59_Pro.jpg | blurry; low resolution | no camera info
+FAIL  WIN_20261115_13_37_10_Pro.jpg | blurry; low resolution | no camera info
+FAIL  WIN_20261115_13_37_15_Pro.jpg | blurry; low resolution | no camera info
+
+Checked 4 photos. Report saved to report.csv
 ```
+
+Webcam images are small (1280x720) and soft, so the tool flags them. Photos from a phone or camera usually pass the resolution check.
 
 ## Limitations
 
 - Blur detection is an estimate. Scores differ between cameras, so the threshold may need adjusting.
 - Photos edited or shared through social media often lose EXIF data.
+- Photos shared through WhatsApp are resized and lose their EXIF data, so they usually fail the resolution check and show no camera info.
 - The tool does not check licensing or whether an image is in scope for Commons. Always review those yourself.
 - Currently it works on folders only.
 
