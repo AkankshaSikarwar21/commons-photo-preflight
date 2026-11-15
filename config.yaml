@@ -1,0 +1,4 @@
+blur_threshold: 100.0
+min_pixels: 2000000
+check_commons: true
+request_delay_seconds: 1.0
