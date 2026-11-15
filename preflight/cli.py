@@ -58,7 +58,7 @@ def main():
             row = {"file": name, "status": "ERROR", "blur_score": "",
                    "size": "", "problems": str(e), "warnings": ""}
         rows.append(row)
-        print(f"{row['status']:5} {row['file']}  {row['problems']} {row['warnings']}")
+        print(f"{row['status']:5} {row['file']} | {row['problems']} | {row['warnings']}")
 
     if rows:
         with open(args.report, "w", newline="", encoding="utf-8") as f:
